@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9fbff"
+    tools:context=".EditFragment"
+    android:animateLayoutChanges="true">
+
+
+    <ScrollView
+        android:animateLayoutChanges="true"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:animateLayoutChanges="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="50dp">
+
+                <TextView
+                    android:id="@+id/textView_durasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/hrd"
+                    android:text="Durasi  :"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/layout_opsi_durasi"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_seterika" />
+
+                <TextView
+                    android:id="@+id/textview_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/hrd"
+                    android:text="Alamat :"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/input_alamat"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_judul" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_selimut"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/whitebox_round_corners_stroke"
+                    android:elevation="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/layout_sepatu"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/layout_pakaian"
+                    app:layout_constraintTop_toTopOf="@+id/layout_pakaian">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sub_layout_selimut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/img_selimut"
+                            android:layout_width="75dp"
+                            android:layout_height="83dp"
+                            android:src="@drawable/quilt"
+                            app:layout_constraintBottom_toTopOf="@+id/txt_selimut"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.6"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_selimut"
+                            android:layout_width="78dp"
+                            android:layout_height="19dp"
+                            android:fontFamily="@font/hrd"
+                            android:gravity="center"
+                            android:text="Selimut/Sprei"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/img_selimut" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_opsi_durasi"
+                    android:layout_width="347dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/whitebox_round_corners"
+                    android:elevation="4dp"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_durasi">
+
+                    <RadioGroup
+                        android:id="@+id/opsi_durasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RadioButton
+                            android:id="@+id/reguler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:fontFamily="@font/hrd"
+                            android:layoutDirection="rtl"
+                            android:text="Reguler"
+                            android:textAlignment="textStart"
+                            android:textColor="#808080" />
+
+                        <RadioButton
+                            android:id="@+id/swift"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:fontFamily="@font/hrd"
+                            android:layoutDirection="rtl"
+                            android:text="Swift"
+                            android:textAlignment="textStart"
+                            android:textColor="#808080" />
+
+                        <RadioButton
+                            android:id="@+id/sameday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:fontFamily="@font/hrd"
+                            android:layoutDirection="rtl"
+                            android:text="Same Day"
+                            android:textAlignment="textStart"
+                            android:textColor="#808080" />
+                    </RadioGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textview_jenis_cucian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/hrd"
+                    android:text="Jenis Cucian :"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/input_alamat"
+                    app:layout_constraintTop_toBottomOf="@+id/input_alamat" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_tas"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/whitebox_round_corners_stroke"
+                    android:elevation="4dp"
+                    app:layout_constraintStart_toStartOf="@+id/layout_selimut"
+                    app:layout_constraintTop_toTopOf="@+id/layout_helm">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sub_layout_tas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/img_tas"
+                            android:layout_width="75dp"
+                            android:layout_height="83dp"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"
+                            android:src="@drawable/bag"
+                            app:layout_constraintBottom_toTopOf="@+id/txt_tas"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.6"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_tas"
+                            android:layout_width="58dp"
+                            android:layout_height="19dp"
+                            android:fontFamily="@font/hrd"
+                            android:gravity="center"
+                            android:text="Tas"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/img_tas" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <EditText
+                    android:id="@+id/input_alamat"
+                    android:layout_width="347dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/whitebox_round_corners"
+                    android:fontFamily="@font/hrd"
+                    android:hint="Alamat penjemputan cucian"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:translationZ="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_alamat" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_pakaian"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/whitebox_round_corners"
+                    android:elevation="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/input_alamat"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_jenis_cucian">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sub_layout_pakaian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imageView_pakaian"
+                            android:layout_width="75dp"
+                            android:layout_height="83dp"
+                            android:src="@drawable/shirt"
+                            app:layout_constraintBottom_toTopOf="@+id/textView_pakaian"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.6"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView_pakaian"
+                            android:layout_width="58dp"
+                            android:layout_height="19dp"
+                            android:fontFamily="@font/hrd"
+                            android:gravity="center"
+                            android:text="Pakaian"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_pakaian" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textview_judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/hrd"
+                    android:text="Edit Pesanan"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_sepatu"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/whitebox_round_corners_stroke"
+                    android:elevation="4dp"
+                    app:layout_constraintEnd_toEndOf="@+id/input_alamat"
+                    app:layout_constraintTop_toTopOf="@+id/layout_pakaian">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sub_layout_sepatu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/img_sepatu"
+                            android:layout_width="75dp"
+                            android:layout_height="83dp"
+                            android:src="@drawable/shoe"
+                            app:layout_constraintBottom_toTopOf="@+id/txt_sepatu"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.6"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_sepatu"
+                            android:layout_width="58dp"
+                            android:layout_height="19dp"
+                            android:fontFamily="@font/hrd"
+                            android:gravity="center"
+                            android:text="Sepatu"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/img_sepatu" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_helm"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/whitebox_round_corners"
+                    android:elevation="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView_durasi"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_pakaian">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sub_layout_helm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/img_helm"
+                            android:layout_width="75dp"
+                            android:layout_height="83dp"
+                            android:scaleX="0.7"
+                            android:scaleY="0.7"
+                            android:src="@drawable/helmet"
+                            app:layout_constraintBottom_toTopOf="@+id/txt_helm"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.6"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_helm"
+                            android:layout_width="58dp"
+                            android:layout_height="19dp"
+                            android:fontFamily="@font/hrd"
+                            android:gravity="center"
+                            android:text="Helm"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/img_helm" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBox_seterika"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:fontFamily="@font/hrd"
+                    android:text="Seterika"
+                    android:textColor="#808080"
+                    app:layout_constraintStart_toStartOf="@+id/input_alamat"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_helm" />
+
+                <TextView
+                    android:id="@+id/textView_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/hrd"
+                    android:text="Mohon lengkapi pesanan anda"
+                    android:textColor="#f48b87"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_opsi_durasi" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_button_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/whitebox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/bt_order"
+            android:layout_width="180dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/hrd"
+            android:text="Ubah"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

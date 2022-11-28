@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="#f9fbff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/whitebox_round_corners"
+            android:elevation="4dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textview_jenis_cucian"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Cucian :"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/order_number"
+                app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+            <TextView
+                android:id="@+id/textview_status"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp"
+                android:text="Status :"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textview_jenis_cucian"
+                app:layout_constraintTop_toBottomOf="@+id/jenis_cucian" />
+
+            <TextView
+                android:id="@+id/order_number"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/hrd"
+                android:text="No"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/seterika"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hrd"
+                android:gravity="right"
+                android:text="seterika"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/durasi"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hrd"
+                android:text="alamat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_alamat"
+                app:layout_constraintTop_toBottomOf="@+id/textView_alamat"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/jenis_cucian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hrd"
+                android:text="jenis_cucian"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/alamat"
+                app:layout_constraintTop_toBottomOf="@+id/textview_jenis_cucian"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:textColor="#f4a49c"
+                android:id="@+id/status_cucian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hrd"
+                android:text="Menunggu penjemputan oleh driver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textview_status"
+                app:layout_constraintTop_toBottomOf="@+id/textview_status"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/durasi"
+                android:layout_width="72dp"
+                android:layout_height="24dp"
+                android:gravity="right"
+                android:text="durasi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/textView_alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Alamat :"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/order_number"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/order_id"
+                android:textSize="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/hrd"
+                android:text="order_id"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/textview_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/hrd"
+                android:text="order_id :"
+                android:textSize="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/order_id"
+                app:layout_constraintTop_toTopOf="@+id/order_id"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

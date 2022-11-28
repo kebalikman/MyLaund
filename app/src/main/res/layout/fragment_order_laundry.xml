@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9fbff"
+    tools:context=".OrderLaundry">
+
+    <Button
+        android:id="@+id/bt_konfirmasi"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/hrd"
+        android:text="Konfirmasi Pesanan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="347dp"
+        android:layout_height="308dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/whitebox_round_corners"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView_passed_durasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=". . ."
+            app:layout_constraintStart_toStartOf="@+id/textview_durasi"
+            app:layout_constraintTop_toBottomOf="@+id/textview_durasi" />
+
+        <TextView
+            android:id="@+id/textview_durasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hrd"
+            android:text="Durasi"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/textView_passed_seterika"
+            app:layout_constraintTop_toBottomOf="@+id/textView_passed_seterika" />
+
+        <TextView
+            android:id="@+id/textView_passed_seterika"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=". . ."
+            app:layout_constraintStart_toStartOf="@+id/textview_seterika"
+            app:layout_constraintTop_toBottomOf="@+id/textview_seterika" />
+
+        <TextView
+            android:id="@+id/textview_seterika"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hrd"
+            android:text="Seterika"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/textView_passed_jenis_cucian"
+            app:layout_constraintTop_toBottomOf="@+id/textView_passed_jenis_cucian" />
+
+        <TextView
+            android:id="@+id/textView_passed_jenis_cucian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=". . ."
+            app:layout_constraintStart_toStartOf="@+id/textView_alamat"
+            app:layout_constraintTop_toBottomOf="@+id/textview_jenis_cucian" />
+
+        <TextView
+            android:id="@+id/textview_jenis_cucian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/hrd"
+            android:text="Jenis Cucian"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_passed_alamat" />
+
+        <TextView
+            android:id="@+id/textView_passed_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=". . ."
+            app:layout_constraintStart_toStartOf="@+id/textView_alamat"
+            app:layout_constraintTop_toBottomOf="@+id/textView_alamat" />
+
+        <TextView
+            android:id="@+id/textview_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hrd"
+            android:text="Detail Pesanan"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/hrd"
+            android:text="Alamat"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_judul" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
